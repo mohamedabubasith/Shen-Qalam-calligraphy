@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
           <img
             src="/Shen-Qalam-calligraphy/logo-icon.jpg"
             alt="Shen Qalam Logo"
-            className="h-40 w-40 -mt-20 sm:h-40 sm:w-40 md:h-48 md:w-48 mx-auto mb-6 object-contain rounded-lg transition-all duration-300 dark:brightness-0 dark:invert"
+            className="h-40 w-40 -mt-40 sm:h-40 sm:w-40 md:h-48 md:w-48 mx-auto mb-6 object-contain rounded-lg transition-all duration-300 dark:brightness-0 dark:invert"
           />
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-brand-primary dark:text-gray-100 mb-4">
             Shen Qalam
