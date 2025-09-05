@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
       <nav className="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
         <a href="#home" onClick={(e) => handleNavLinkClick(e, '#home')} className="flex items-center space-x-2 cursor-pointer">
           <img
-            src="/logo-icon.jpg"
+            src="/Shen-Qalam-calligraphy/logo-icon.jpg"
             alt="Shen Qalam Logo"
             className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain rounded-lg transition-all duration-300 dark:brightness-0 dark:invert"
           />
