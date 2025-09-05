@@ -3,9 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Shen-Qalam-calligraphy/', // Use relative paths
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-  },
+  base: '/Shen-Qalam-calligraphy/', 
 })
