@@ -1,5 +1,5 @@
 
-import { NavLink, GalleryImage } from './types';
+import { NavLink, GalleryImage } from '../types';
 
 export const NAV_LINKS: NavLink[] = [
   { href: '#services', label: 'What We Provide' },
