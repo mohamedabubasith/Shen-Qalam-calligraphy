@@ -25,7 +25,6 @@ const CloseIcon: React.FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
-
 const Navbar: React.FC = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
   const [isOpen, setIsOpen] = useState(false);
@@ -62,8 +61,6 @@ const Navbar: React.FC = () => {
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
-      // The header's height can vary, so we get it dynamically.
-      // A fallback is provided in case the element isn't found immediately.
       const headerOffset = document.querySelector('header')?.offsetHeight || 72;
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -79,30 +76,29 @@ const Navbar: React.FC = () => {
     }
   };
 
-
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-light-bg/80 dark:bg-dark-bg/80 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
-      <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
+    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-light-bg/90 dark:bg-dark-bg/90 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
+      <nav className="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
         <a href="#home" onClick={(e) => handleNavLinkClick(e, '#home')} className="flex items-center space-x-2 cursor-pointer">
           <img
             src="/logo-icon.jpg"
             alt="Shen Qalam Logo"
-            className="h-14 w-14 object-contain rounded-lg text-white"
+            className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain rounded-lg transition-all duration-300 dark:brightness-0 dark:invert"
           />
-          <span className="font-serif text-xl font-bold text-brand-primary dark:text-gray-100">SHEN QALAM</span>
+          <span className="font-serif text-lg sm:text-xl font-bold text-brand-primary dark:text-gray-100">SHEN QALAM</span>
         </a>
 
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
           {NAV_LINKS.map((link) => (
-            <a key={link.label} href={link.href} onClick={(e) => handleNavLinkClick(e, link.href)} className="text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-white transition-colors duration-300 cursor-pointer">
+            <a key={link.label} href={link.href} onClick={(e) => handleNavLinkClick(e, link.href)} className="text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-white transition-colors duration-300 cursor-pointer text-sm lg:text-base">
               {link.label}
             </a>
           ))}
         </div>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2 sm:space-x-4">
           <button onClick={toggleTheme} className="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-surface focus:outline-none transition-colors duration-300">
-            {theme === 'dark' ? <SunIcon className="w-6 h-6" /> : <MoonIcon className="w-6 h-6" />}
+            {theme === 'dark' ? <SunIcon className="w-5 h-5 sm:w-6 sm:h-6" /> : <MoonIcon className="w-5 h-5 sm:w-6 sm:h-6" />}
           </button>
           <div className="md:hidden">
             <button onClick={toggleMenu} className="p-2 rounded-md text-gray-700 dark:text-gray-300 focus:outline-none">
@@ -111,12 +107,13 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </nav>
+
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-light-bg dark:bg-dark-surface">
-          <div className="flex flex-col items-center space-y-4 py-4">
+        <div className="md:hidden bg-light-bg/95 dark:bg-dark-surface/95 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700">
+          <div className="flex flex-col items-center space-y-4 py-6">
             {NAV_LINKS.map((link) => (
-              <a key={link.label} href={link.href} onClick={(e) => handleNavLinkClick(e, link.href)} className="text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-white transition-colors duration-300 text-lg cursor-pointer">
+              <a key={link.label} href={link.href} onClick={(e) => handleNavLinkClick(e, link.href)} className="text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-white transition-colors duration-300 text-lg cursor-pointer py-2">
                 {link.label}
               </a>
             ))}
