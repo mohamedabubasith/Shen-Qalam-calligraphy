@@ -10,7 +10,10 @@ const HeroSection: React.FC = () => {
             alt="Shen Qalam Logo"
             className="h-40 w-40 -mt-40 sm:h-40 sm:w-40 md:h-48 md:w-48 mx-auto mb-6 object-contain rounded-lg transition-all duration-300 dark:brightness-0 dark:invert"
           />
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-brand-primary dark:text-gray-100 mb-4">
+          <h1
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-4"
+            style={{ color: '#3D5C61' }}
+          >
             Shen Qalam
           </h1>
           <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4">
