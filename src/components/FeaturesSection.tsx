@@ -43,7 +43,7 @@ const FeaturesSection: React.FC = () => {
             return (
               <div key={index} className="p-4 sm:p-6 bg-white dark:bg-dark-surface rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
                 <IconComponent className="w-10 h-10 sm:w-12 sm:h-12 text-brand-accent mx-auto mb-4" />
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-200">{feature}</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-brand-primary dark:text-gray-200">{feature}</h3>
               </div>
             );
           })}

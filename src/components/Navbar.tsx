@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
             alt="Shen Qalam Logo"
             className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain rounded-lg transition-all duration-300 dark:brightness-0 dark:invert"
           />
-          <span className="font-serif text-lg sm:text-xl font-bold text-brand-primary dark:text-gray-100">SHEN QALAM</span>
+          <span className="font-serif text-lg sm:text-xl font-bold text-brand-primary dark:text-gray-100" style={{ color: '#3D5C61' }}>SHEN QALAM</span>
         </a>
 
         <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
