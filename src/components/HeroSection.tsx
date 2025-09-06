@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
       <div className="container mx-auto px-6 text-center">
         <div className="animate-[fadeInUp_1s_ease-out]">
           <img
-            src="/Shen-Qalam-calligraphy/logo-icon.jpg"
+            src="/logo-icon.jpg"
             alt="Shen Qalam Logo"
             className="h-40 w-40 -mt-40 sm:h-40 sm:w-40 md:h-48 md:w-48 mx-auto mb-6 object-contain rounded-lg transition-all duration-300 dark:brightness-0 dark:invert"
           />
